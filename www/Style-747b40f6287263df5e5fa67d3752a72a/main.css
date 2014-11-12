@@ -1,0 +1,28 @@
+body {
+  font-family: sans-serif;
+  font-size: 16px; }
+  body > header {
+    position: relative;
+    background: rgba(0, 0, 0, 0.1);
+    overflow: hidden; }
+    body > header > a {
+      display: block;
+      padding: 1rem; }
+      body > header > a img {
+        vertical-align: top;
+        padding-right: 1rem; }
+      body > header > a h1 {
+        display: inline-block;
+        margin: 0;
+        padding: 0;
+        font-size: 2rem;
+        height: 5rem;
+        line-height: 5rem;
+        color: #000; }
+  body > main > * {
+    padding-left: 7rem; }
+  body > footer {
+    margin-top: 5rem;
+    opacity: 0.5; }
+    body > footer > * {
+      padding-left: 7rem; }

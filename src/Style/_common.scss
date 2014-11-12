@@ -1,0 +1,50 @@
+body {
+	font-family: sans-serif;
+	font-size: 16px;
+
+	>header {
+		position: relative;
+		background: $col_header;
+		overflow: hidden;
+
+		>a {
+			display: block;
+			padding: 1rem;
+
+			img {
+				vertical-align: top;
+				padding-right: 1rem;
+			}
+
+			h1 {
+				display: inline-block;
+				margin: 0;
+				padding: 0;
+				font-size: 2rem;
+				height: 5rem;
+				line-height: 5rem;
+				color: #000;
+			}
+		}
+	}
+
+	>main {
+		margin-top: 1em;
+		
+		>aside {
+			float: right;
+		}
+		>* {
+			padding-left: 7rem;
+		}
+	}
+
+	>footer {
+		margin-top: 5rem;
+		opacity: 0.5;
+
+		>* {
+			padding-left: 7rem;
+		}
+	}
+}

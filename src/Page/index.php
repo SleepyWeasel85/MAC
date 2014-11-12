@@ -10,8 +10,10 @@ public function go() {
 }
 private function outputtable(){
 	$tablebody = $this->document->querySelector("table tbody");
-	for ($i=0; $i < 10; $i++) { 
+	for ($i=1; $i <= $_POST["term"]; $i++) { 
 		$tr = $this->template->get("payment");
+		$columnList = $tr->querySelectorAll("td");
+		$columnList[0]->textContent = $i;
 		$tablebody->appendChild($tr);
 	}
 }

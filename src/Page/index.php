@@ -9,8 +9,11 @@ public function go() {
 	}
 }
 private function outputtable(){
-	var_dump($_POST);
-	die("cunt");
+	$tablebody = $this->document->querySelector("table tbody");
+	for ($i=0; $i < 10; $i++) { 
+		$tr = $this->template->get("payment");
+		$tablebody->appendChild($tr);
+	}
 }
 
 }#

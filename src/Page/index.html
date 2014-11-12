@@ -1,18 +1,23 @@
 <main>
 	<aside>Top Tips! blah blah blah!</aside>
 	<section>
-		<form>
+		<form method="post">
 			<div>
 				<label for="principle">Principle</label>
-				<input id="principle" name="principle" type="number"/>
+				<input required placeholder="Amount Borrowed" id="principle" name="principle" type="number"/>
 			</div>
 			<div>
 				<label for="interest">Interest</label>
-				<input id="interest" name="interest" type="number"/>
+				<input required placeholder="APR of loan" id="interest" name="interest" type="number"/>
 			</div>
 			<div>
 				<label for="term">Term</label>
-				<input id="term" name="term" type="number"/>
+				<input required placeholder="Number of months" id="term" name="term" type="number"/>
+			</div>
+			<div>
+				<button>
+					Submit
+				</button>
 			</div>
 		</form>
 	</section>

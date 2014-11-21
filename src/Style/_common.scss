@@ -37,6 +37,14 @@ body {
 		>* {
 			padding-left: 7rem;
 		}
+
+		table {
+			tr {
+				td {
+					border: 1px solid black;
+				}
+			}
+		}
 	}
 
 	>footer {

@@ -16,7 +16,7 @@ public function __construct($principle, $rate, $term){
 public function calculate(){
 	$numerator = $this->rate*$this->principle*$this->getMultiplier();
 	$denominator = $this->getMultiplier()-1;
-	return $numerator/$denominator;
+	return number_format($numerator/$denominator, 2);
 }
 
 private function getMultiplier(){

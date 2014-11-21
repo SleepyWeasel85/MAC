@@ -4,8 +4,9 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "ad4205e18147d889a3e69be19553e048",
-    "packages": [
+    "hash": "a39ef6afb919de1eab0fb2cc7fbd6d1e",
+    "packages": [],
+    "packages-dev": [
         {
             "name": "brightflair/php.gt",
             "version": "dev-master",
@@ -404,7 +405,6 @@
             "time": "2014-10-26 07:41:27"
         }
     ],
-    "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {

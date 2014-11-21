@@ -1,31 +1,31 @@
 <?php
 namespace App\Page;
+use \App\Calculation\MonthlyPayment;
 
 Class Index extends \Gt\Page\Logic {
 
 public function go() {
 	if(!empty($_POST)){
+		$monthlyPayment = new MonthlyPayment($_POST["principle"], $_POST["interest"], $_POST["term"]);
+		$monthlyPaymentAmount = $monthlyPayment->calculate();
 		$this->outputtable();
 		$this->prepopulateForm();
+		$this->outputTopTips($monthlyPaymentAmount);
 	}
 }
 private function outputtable(){
-	$principle = $_POST["principle"];
-	$rate = $_POST["interest"];
-	$months = $_POST["term"];
+	// $tablebody = $this->document->querySelector("table tbody");
 
-	$tablebody = $this->document->querySelector("table tbody");
-	for ($i=1; $i <= $months; $i++) {
-		$topline = $rate*$principle*pow(1+$rate,$months);
-		$bottomline = pow(1+$rate, $months)-1;
-		$amount = $topline/$bottomline;
+	// 	$tr = $this->template->get("payment");
+	// 	$columnList = $tr->querySelectorAll("td");
+	// 	$columnList[0]->textContent = $i;
+	// 	$columnList[1]->textContent = number_format($amount, 2);
+	// 	$tablebody->appendChild($tr);
+}
 
-		$tr = $this->template->get("payment");
-		$columnList = $tr->querySelectorAll("td");
-		$columnList[0]->textContent = $i;
-		$columnList[1]->textContent = number_format($amount, 2);
-		$tablebody->appendChild($tr);
-	}
+private function outputTopTips($monthlyPaymentAmount){
+	$this->document->querySelector("aside #monthlyPaymentAmount")->textContent=
+		number_format($monthlyPaymentAmount,2);
 }
 
 private function prepopulateForm() {
